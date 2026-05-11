@@ -23,8 +23,8 @@
     --gold:         #b89346;
     --gold-bright:  #d4ae5a;
     --gold-deep:    #8a6b2a;
-    --ink:          #4a4a3e;
-    --ink-soft:     #6a6a5a;
+    --ink:          #1e1e18;
+    --ink-soft:     #3a3a2e;
 
     --font-display: 'Great Vibes', 'Marck Script', 'Cormorant Garamond', cursive;
     --font-serif:   'Cormorant Garamond', 'Times New Roman', serif;
@@ -40,7 +40,7 @@
     background: var(--paper);
     color: var(--ink);
     font-family: var(--font-body);
-    font-weight: 300;
+    font-weight: 400;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
     line-height: 1.6;
@@ -138,6 +138,69 @@
   @keyframes pulse-line {
     0%, 100% { opacity: 0.3; transform: scaleY(0.7); }
     50%      { opacity: 1;   transform: scaleY(1); }
+  }
+
+  .hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(44px, 7vw, 80px);
+    color: var(--gold);
+    text-align: center;
+    margin-bottom: 48px;
+    font-weight: 400;
+    line-height: 1.1;
+  }
+
+  .hero-meta {
+    margin-top: 48px;
+    text-align: center;
+    max-width: 560px;
+  }
+
+  .hero-date {
+    font-family: var(--font-serif);
+    font-size: 22px;
+    color: var(--gold-deep);
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+
+  .hero-events {
+    font-family: var(--font-italic);
+    font-style: italic;
+    font-size: 20px;
+    color: var(--ink);
+    line-height: 1.9;
+    margin-bottom: 32px;
+  }
+
+  .hero-greeting {
+    font-family: var(--font-serif);
+    font-size: 18px;
+    color: var(--ink);
+    line-height: 1.9;
+    margin-bottom: 40px;
+  }
+
+  .rsvp-deadline {
+    text-align: center;
+    font-family: var(--font-body);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 24px;
+    letter-spacing: 0.3px;
+  }
+
+  .footer-gift {
+    font-family: var(--font-serif);
+    font-size: 19px;
+    font-weight: 500;
+    color: var(--ink);
+    max-width: 560px;
+    margin: 0 auto 48px;
+    text-align: center;
+    line-height: 1.8;
   }
 
   /* ============= DIVIDER ============= */
@@ -656,6 +719,14 @@
     .submit-btn { font-size: 14px; letter-spacing: 3px; padding: 16px; }
     footer { padding: 60px 18px 40px; }
 
+    /* Hero text on mobile */
+    .hero-title { font-size: clamp(36px, 10vw, 52px); margin-bottom: 32px; }
+    .hero-date { font-size: 18px; }
+    .hero-events { font-size: 17px; }
+    .hero-greeting { font-size: 16px; }
+    .rsvp-deadline { font-size: 16px; }
+    .footer-gift { font-size: 16px; }
+
     /* Fix section title overflow on narrow screens */
     .section-title { font-size: clamp(36px, 10vw, 52px); overflow-wrap: break-word; }
     .rsvp-card .section-title { font-size: clamp(26px, 8.5vw, 40px); }
@@ -681,10 +752,23 @@
 
   <!-- HERO -->
   <section class="hero" aria-label="Покана">
+    <h1 class="hero-title">Покана за нашия семеен празник</h1>
+
     <div class="hero-frame">
       <img class="invitation-image"
-           src="invitation.jpg"
-           alt="Покана за нашия семеен празник — 31 май 2026 — Свето Кръщене и Годинка на Алегра, Сватба на Александър и Царина" />
+           src="koritsa.png"
+           alt="Покана за нашия семеен празник — 31 май 2026" />
+    </div>
+
+    <div class="hero-meta">
+      <div class="hero-date">31.05.2026г.</div>
+      <div class="hero-events">
+        1 годинка и Свето Кръщение на Алегра<br>
+        Сватба Александър и Царина
+      </div>
+      <p class="hero-greeting">
+        Скъпи приятели, скъпо семейство, заповядайте да отпразнуваме този специален за нас ден заедно!
+      </p>
     </div>
 
     <a class="scroll-cue" href="#program" aria-label="Към програмата">
@@ -760,7 +844,7 @@
         </div>
         <div class="timeline-card">
           <div class="time-stamp">15:00</div>
-          <div class="event-name">Официално празненство · Годинка на Алегра</div>
+          <div class="event-name">Официално празненство</div>
           <div class="event-place">Tenta Events · ул. Коста Лулчев, кв. Гео Милев</div>
           <a class="maps-link" href="https://maps.google.com/?q=Tenta+Events+Sofia+Kosta+Lulchev" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -808,7 +892,7 @@
   <section class="rsvp-section" id="rsvp">
     <div class="rsvp-card">
       <div class="ornament" aria-hidden="true">·  ·  ·</div>
-      <div class="section-eyebrow" style="margin-bottom: 8px;">Моля, потвърдете до 15.05.2026</div>
+      <p class="rsvp-deadline">Молим да потвърдите Вашето присъствие до 15.05.2026г.</p>
       <h2 class="section-title" style="margin-bottom: 8px;">Потвърждение</h2>
       <p class="section-sub" style="margin-bottom: 36px;">
         Попълнете формата по-долу, за да знаем, че ще празнуваме с Вас.
@@ -881,7 +965,7 @@
         </div>
 
         <div class="status error" id="status-error" role="alert">
-          Нещо се обърка при изпращането. Моля, опитайте отново или ни се обадете на 0888 257 389.
+          Нещо се обърка при изпращането. Моля, опитайте отново или ни се обадете на 0887 787 421.
         </div>
 
       </form>
@@ -892,16 +976,18 @@
 
 <!-- FOOTER -->
 <footer>
+  <p class="footer-gift">Вашето присъствие е най-големият подарък за нас, но ако все пак желаете да отбележите повода с жест, ще го приемем с благодарност за нашите бъдещи семейни приключения.</p>
+
   <div class="footer-names">Александър · Царина · Алегра</div>
 
   <div class="footer-meta">
     <strong>Дрескод:</strong> Елегантен<br>
-    <em>Молим да избягвате бели и черни цветове</em>
+    <em>Молим Ви най-учтиво да запазите белия цвят само за Алегра и Царина</em>
 
     <div class="footer-divider"></div>
 
-    Потвърждение до <strong>15.05.2026</strong><br>
-    За въпроси: <a href="tel:+359888257389">0888 257 389</a>
+    Потвърждение до <strong>15.05.2026г.</strong><br>
+    За въпроси: <a href="tel:+359887787421">0887 787 421</a>
   </div>
 </footer>
 
