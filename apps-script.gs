@@ -35,14 +35,14 @@ function doPost(e) {
     const body = [
       'Ново RSVP потвърждение',
       '',
-      `Ime:            ${data.name}`,
-      `Prisastvie:     ${data.attendance}`,
-      `Pridrujitel:    ${data.plusOne}${data.plusOneName ? ' (' + data.plusOneName + ')' : ''}`,
-      `Yastie:         ${data.food  || '—'}`,
-      `Alkohol:        ${data.drink || '—'}`,
-      `Pojelanie:      ${data.message || '—'}`,
+      `Име:             ${data.name}`,
+      `Присъствие:      ${data.attendance}`,
+      `Придружител:     ${data.plusOne}${data.plusOneName ? ' (' + data.plusOneName + ')' : ''}`,
+      `Ястие:           ${data.food  || '—'}`,
+      `Алкохол:         ${data.drink || '—'}`,
+      `Пожелание:       ${data.message || '—'}`,
       '',
-      `Izprateno na: ${data.submittedAt}`,
+      `Изпратено на: ${data.submittedAt}`,
     ].join('\n');
 
     MailApp.sendEmail(HOST_EMAIL, subject, body);
