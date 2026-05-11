@@ -415,6 +415,10 @@
     pointer-events: none;
   }
 
+  .rsvp-card .section-title {
+    font-size: clamp(64px, 10vw, 100px);
+  }
+
   .rsvp-card .ornament {
     text-align: center;
     color: var(--gold);
@@ -645,11 +649,22 @@
     .event-place { font-size: 15px; }
     .countdown-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
     .count-cell { padding: 22px 8px; }
-    .rsvp-card { padding: 40px 22px; }
+    .rsvp-card { padding: 40px 18px; }
     .pill-group { gap: 8px; }
-    .pill label { padding: 11px 14px; font-size: 14px; }
+    .pill { flex: 1 1 calc(50% - 4px); }
+    .pill label { padding: 10px 12px; font-size: 13px; white-space: normal; overflow-wrap: break-word; text-align: center; }
     .submit-btn { font-size: 14px; letter-spacing: 3px; padding: 16px; }
     footer { padding: 60px 18px 40px; }
+
+    /* Fix section title overflow on narrow screens */
+    .section-title { font-size: clamp(36px, 10vw, 52px); overflow-wrap: break-word; }
+    .rsvp-card .section-title { font-size: clamp(26px, 8.5vw, 40px); }
+    .section-sub { font-size: 16px; }
+    .field-label { font-size: 16px; }
+
+    /* Fix footer names overflow — script font is very wide at large sizes */
+    .footer-names { font-size: clamp(28px, 8vw, 40px); overflow-wrap: break-word; }
+    .footer-meta { font-size: 15px; }
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -794,7 +809,7 @@
     <div class="rsvp-card">
       <div class="ornament" aria-hidden="true">·  ·  ·</div>
       <div class="section-eyebrow" style="margin-bottom: 8px;">Моля, потвърдете до 15.05.2026</div>
-      <h2 class="section-title" style="font-size: clamp(64px, 10vw, 100px); margin-bottom: 8px;">Потвърждение</h2>
+      <h2 class="section-title" style="margin-bottom: 8px;">Потвърждение</h2>
       <p class="section-sub" style="margin-bottom: 36px;">
         Попълнете формата по-долу, за да знаем, че ще празнуваме с Вас.
       </p>
