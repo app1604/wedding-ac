@@ -121,8 +121,7 @@
   }
 
   .scroll-cue-text {
-    font-family: var(--font-italic);
-    font-style: italic;
+    font-family: var(--font-serif);
     font-size: 18px;
     color: var(--sage-deep);
     letter-spacing: 1px;
@@ -158,16 +157,15 @@
 
   .hero-date {
     font-family: var(--font-serif);
-    font-size: 22px;
+    font-size: 32px;
     color: var(--gold-deep);
     letter-spacing: 4px;
     margin-bottom: 20px;
-    font-weight: 500;
+    font-weight: 600;
   }
 
   .hero-events {
-    font-family: var(--font-italic);
-    font-style: italic;
+    font-family: var(--font-serif);
     font-size: 20px;
     color: var(--ink);
     line-height: 1.9;
@@ -254,8 +252,7 @@
 
   .section-sub {
     text-align: center;
-    font-family: var(--font-italic);
-    font-style: italic;
+    font-family: var(--font-serif);
     font-size: 18px;
     color: var(--sage-deep);
     max-width: 560px;
@@ -360,8 +357,7 @@
   }
 
   .event-place {
-    font-family: var(--font-italic);
-    font-style: italic;
+    font-family: var(--font-serif);
     font-size: 17px;
     color: var(--sage-deep);
     margin-bottom: 14px;
@@ -499,8 +495,7 @@
 
   .field-label {
     display: block;
-    font-family: var(--font-italic);
-    font-style: italic;
+    font-family: var(--font-serif);
     font-size: 18px;
     color: var(--sage-deep);
     margin-bottom: 10px;
@@ -629,8 +624,7 @@
     margin-top: 20px;
     padding: 18px 20px;
     text-align: center;
-    font-family: var(--font-italic);
-    font-style: italic;
+    font-family: var(--font-serif);
     font-size: 17px;
     border: 1px solid;
     display: none;
@@ -667,9 +661,18 @@
     font-weight: 400;
   }
 
+  .footer-dresscode {
+    font-family: var(--font-serif);
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--ink);
+    line-height: 1.8;
+    max-width: 500px;
+    margin: 0 auto 24px;
+  }
+
   .footer-meta {
-    font-family: var(--font-italic);
-    font-style: italic;
+    font-family: var(--font-serif);
     font-size: 17px;
     color: var(--sage-deep);
     line-height: 1.9;
@@ -781,10 +784,6 @@
   <section class="program" id="program">
     <div class="section-eyebrow">31 · 05 · 2026</div>
     <h2 class="section-title">Програма</h2>
-    <p class="section-sub">
-      Един ден, три празника, едно семейство.<br>
-      Ще се радваме да бъдете с нас на всеки момент.
-    </p>
 
     <div class="timeline">
 
@@ -802,7 +801,7 @@
         </div>
         <div class="timeline-card">
           <div class="time-stamp">12:30</div>
-          <div class="event-name">Свето Кръщене на Алегра</div>
+          <div class="event-name">Свето Кръщение на Алегра</div>
           <div class="event-place">Храм „Света Неделя"</div>
           <a class="maps-link" href="https://maps.google.com/?q=Храм+Света+Неделя+София" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -867,6 +866,7 @@
   <section class="countdown-section">
     <div class="section-eyebrow">До нашия празник</div>
     <h2 class="section-title">Очакваме Ви</h2>
+    <p class="section-sub">Ще се радваме да споделите с нас всеки миг.</p>
 
     <div class="countdown-grid" role="timer" aria-live="polite">
       <div class="count-cell">
@@ -980,12 +980,13 @@
 
   <div class="footer-names">Александър · Царина · Алегра</div>
 
-  <div class="footer-meta">
+  <div class="footer-dresscode">
     <strong>Дрескод:</strong> Елегантен<br>
-    <em>Молим Ви най-учтиво да запазите белия цвят само за Алегра и Царина</em>
+    Молим Ви най-учтиво да запазите белия цвят само за домакините
+  </div>
 
+  <div class="footer-meta">
     <div class="footer-divider"></div>
-
     Потвърждение до <strong>15.05.2026г.</strong><br>
     За въпроси: <a href="tel:+359887787421">0887 787 421</a>
   </div>
@@ -1040,7 +1041,7 @@
 
 /* RSVP SUBMISSION */
 (function () {
-  const ENDPOINT = 'https://script.google.com/macros/s/AKfycbysqrl9SRVDwBpOetpbG4Ve3nvmsgJSMrgSjTxVrRQctUPloaSBdf4q6hVbZDnIIWg0/exec';
+  const ENDPOINT = 'https://script.google.com/macros/s/AKfycbwW88c8yquOdB1Tpfk0NIV_zcAZqM0LeFDNarhs_MSTj_aiunX9AuGQ6Ed-QhG4j-PP/exec';
 
   const form  = document.getElementById('rsvp-form');
   const btn   = document.getElementById('submit-btn');
